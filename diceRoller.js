@@ -1,8 +1,12 @@
 function RollDice(){
+
+    //handles random number generation between 1 and 6
     var numRolled = 0;
     numRolled = Math.floor(Math.random()*6) + 1;
 
 
+    //if else statements to add dice images based on each number rolled
+    //uses html DOM images to create image element
     if (numRolled == 1){
         var link1 = document.createElement("img");
         link1.setAttribute("src", "diceNum1.png");
@@ -47,6 +51,8 @@ function RollDice(){
         document.body.appendChild(link6);
     }
 }
+
+//function that clears all of the rolled dice images by removing the elements by ID
 function ClearTable(){
     do {
     var num2 = (document.getElementById("1"))||
